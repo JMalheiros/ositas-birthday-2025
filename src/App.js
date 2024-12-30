@@ -1,11 +1,15 @@
 import './App.css';
 import CountdownTimer from './components/CountDownTimer/CountDownTimer';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router";
 
 function App() {
   return (
-    <div>
-      <CountdownTimer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<CountdownTimer />} />
+        <Route path="*" element={<Navigate to='/' replace />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
