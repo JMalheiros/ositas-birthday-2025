@@ -1,5 +1,5 @@
 import './App.css';
-import CountdownTimer from './components/CountDownTimer';
+import CountdownTimer from './components/CountDownTimer/CountDownTimer';
 
 function App() {
   return (
