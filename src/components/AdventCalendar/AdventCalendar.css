@@ -1,0 +1,41 @@
+.advent-calendar {
+  background: #272B33;
+  background-size: cover;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.calendar-container{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.calendar-day{
+  background-color: #95dd7f;
+  height: 200px;
+  width: 200px;
+  margin: 25px;
+  text-align: center;
+  align-content: center;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .calendar-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .calendar-day{
+    height: 200px;
+    width: 200px;
+  }
+}

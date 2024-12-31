@@ -1,5 +1,7 @@
 import './App.css';
+import AdventCalendar from './components/AdventCalendar/AdventCalendar';
 import CountdownTimer from './components/CountDownTimer/CountDownTimer';
+import './assets/css/shared.css';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router";
 
 function App() {
@@ -7,6 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<CountdownTimer />} />
+        <Route path="/calendar" element={<AdventCalendar />} />
         <Route path="*" element={<Navigate to='/' replace />} />
       </Routes>
     </BrowserRouter>
