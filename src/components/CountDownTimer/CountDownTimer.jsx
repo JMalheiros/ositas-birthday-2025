@@ -4,7 +4,7 @@ import image from "../../assets/img/title.png";
 import image2 from "../../assets/img/title2.png";
 
 const CountdownTimer = () => {
-  const today = new Date();
+  const today = useMemo(() => new Date(), []);
   today.setHours(0, 0, 0, 0);
   var spDate = today;
 
@@ -12,7 +12,7 @@ const CountdownTimer = () => {
   const spEventDate = useMemo(() =>
     (today < new Date("December 31, 2024")) ?
       spDate :
-      spDate.setDate(spDate.getDate() + 1), []);
+      spDate.setDate(spDate.getDate() + 1), [today, spDate]);
   const defaultRemainingTime = eventDate.getTime() - new Date().getTime();
 
   const [birthdayTimeRemaining, setBirthdayTimeRemaining] = useState(defaultRemainingTime);

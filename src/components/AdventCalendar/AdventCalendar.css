@@ -25,7 +25,17 @@
   margin: 25px;
   text-align: center;
   align-content: center;
-  padding: 20px;
+  padding: 20px 10px;
+}
+
+.clue-visible{
+  background-color: whitesmoke !important;
+  align-content: start !important;
+}
+
+.clue{
+  margin: 0;
+  font-size: 15px;
 }
 
 @media only screen and (max-width: 600px) {
