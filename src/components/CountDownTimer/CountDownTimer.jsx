@@ -4,8 +4,15 @@ import image from "../../assets/img/title.png";
 import image2 from "../../assets/img/title2.png";
 
 const CountdownTimer = () => {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  var spDate = today;
+
   const eventDate = useMemo(() => new Date(2025, 0, 7), []);
-  const spEventDate = useMemo(() => new Date("January 1, 2025, 7:30:00"), []);
+  const spEventDate = useMemo(() =>
+    (today < new Date("December 31, 2024")) ?
+      spDate :
+      spDate.setDate(spDate.getDate() + 1), []);
   const defaultRemainingTime = eventDate.getTime() - new Date().getTime();
 
   const [birthdayTimeRemaining, setBirthdayTimeRemaining] = useState(defaultRemainingTime);
@@ -144,7 +151,7 @@ const CountdownTimer = () => {
           <img src={timerSelected === "birthday" ? image : image2} alt="Title" className="image-style" height="200px" />
         </div>
         <p className="countdown-title">
-          Contagem para o {timerSelected === "birthday" ? "aniversário" : "primeiro evento"}
+          Contagem para o {timerSelected === "birthday" ? "aniversário" : "próximo evento"}
         </p>
         <p className={"countdown-date" + (timerSelected === "birthday" ? "" : "-dark")}>
           {formatDate(selectedDate)}
