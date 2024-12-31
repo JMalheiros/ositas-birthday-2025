@@ -1,7 +1,7 @@
 import './App.css';
+import './assets/css/shared.css';
 import AdventCalendar from './components/AdventCalendar/AdventCalendar';
 import CountdownTimer from './components/CountDownTimer/CountDownTimer';
-import './assets/css/shared.css';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router";
 
 function App() {

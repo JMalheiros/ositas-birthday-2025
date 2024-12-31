@@ -75,17 +75,6 @@
   background-color: #95dd7f;
 }
 
-.footer{
-  width: -webkit-fill-available;
-  margin: .25rem;
-  text-align: center;
-  font-size: 1rem;
-  padding: 1rem;
-  background-color: #3b662e;
-  color: white;
-  border-radius: .75rem;
-}
-
 .countdown-value:not(span) {
   background-color: #d1ffc5;
   border-radius: 50%;

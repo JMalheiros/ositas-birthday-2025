@@ -37,12 +37,19 @@ const AdventCalendar = () => {
   return (
     <div className="advent-calendar">
       <div className="image-container">
-        <img src={adventImage} alt="Title" className="image-style" height="200px" />
+        <img src={adventImage} alt="Advent-title" className="image-style" height="200px" />
       </div>
 
       <div className="calendar-container">
         {calendar()}
       </div>
+
+      <a href="/" style={{ textDecoration: "none" }}>
+        <div className="footer">
+          Voltar para a contagem regressiva
+        </div>
+      </a>
+      <br />
     </div>
   );
 }
